@@ -119,24 +119,3 @@ For this setup, we will need 3 servers with Docker installed on it.
          http://localhost:8080
          
 
-====================Mesos-Dockerfile=================
-#Mesos
-FROM centos:latest
-MAINTAINER guyan <guyan0315@163.com>
-
-#Add Mesos resource
-RUN rpm -Uvh 'http://repos.mesosphere.io/el/7/noarch/RPMS/mesosphere-el-repo-7-1.noarch.rpm'
-
-RUN yum install -y docker
-RUN yum install -y mesos
-
-CMD [mesos]
-
-===================Marathon-Dockerfile================
-#Marathon
-FROM centos:latest
-MAINTAINER guyan <guyan0315@163.com>
-RUN yum install marathon
-
-RUN yum install marathon
-
